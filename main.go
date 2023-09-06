@@ -4,7 +4,6 @@ import (
 	"bytes"
 	_ "embed"
 	"encoding/json"
-	"flag"
 	"fmt"
 	"image"
 	"image/png"
@@ -24,6 +23,7 @@ import (
 	"github.com/anacrolix/dms/rrcache"
 	"github.com/anacrolix/log"
 	"github.com/nfnt/resize"
+	flag "github.com/spf13/pflag"
 )
 
 //go:embed "data/VGC Sonic.png"
