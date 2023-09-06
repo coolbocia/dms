@@ -26,7 +26,7 @@ import (
 	flag "github.com/spf13/pflag"
 )
 
-//go:embed "data/VGC Sonic.png"
+//go:embed "data/folder.png"
 var defaultIcon []byte
 
 type dmsConfig struct {
