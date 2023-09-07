@@ -120,14 +120,14 @@ func main() {
 }
 
 func mainErr() error {
-	path := flag.String("path", config.Path, "browse root path")
+	path := flag.StringP("path", "p", config.Path, "browse root path")
 	ifName := flag.String("ifname", config.IfName, "specific SSDP network interface")
 	http := flag.String("http", config.Http, "http server port")
-	friendlyName := flag.String("friendlyName", config.FriendlyName, "server friendly name")
-	deviceIcon := flag.String("deviceIcon", config.DeviceIcon, "device defaultIcon")
+	friendlyName := flag.StringP("friendlyName", "n", config.FriendlyName, "server friendly name")
+	deviceIcon := flag.StringP("deviceIcon", "i", config.DeviceIcon, "device defaultIcon")
 	logHeaders := flag.Bool("logHeaders", config.LogHeaders, "log HTTP headers")
 	fFprobeCachePath := flag.String("fFprobeCachePath", config.FFprobeCachePath, "path to FFprobe cache file")
-	configFilePath := flag.String("config", "", "json configuration file")
+	configFilePath := flag.StringP("config", "c", "", "json configuration file")
 	allowedIps := flag.String("allowedIps", "", "allowed ip of clients, separated by comma")
 	forceTranscodeTo := flag.String("forceTranscodeTo", config.ForceTranscodeTo, "force transcoding to certain format, supported: 'chromecast', 'vp8', 'web'")
 	transcodeLogPattern := flag.String("transcodeLogPattern", "", "pattern where to write transcode logs to. The [tsname] placeholder is replaced with the name of the item currently being played. The default is $HOME/.dms/log/[tsname]")
